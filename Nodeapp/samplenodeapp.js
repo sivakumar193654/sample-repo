@@ -1,14 +1,9 @@
-'use strict';
 
-const express = require('express')
-const app = express();
 
-const port = 8080;
-const host = '0.0.0.0';
+const http = require('http');
 
-app.get('/', (req, res) => {
-  res.send('Hello World from IBM Cloud Essentials!');
+http.createServer(function(req,res){
+  res.end("hello world siva")
+}).listen(8080,()=>{
+console.log('node server on 4000');
 })
-
-app.listen(port, host);
-console.log(`Running on http://${host}:${port}`);
